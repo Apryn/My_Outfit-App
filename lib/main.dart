@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_outfit/homepage.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,6 +13,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Material();
+    return MaterialApp(
+      home: homepage(),
+    );
   }
 }
