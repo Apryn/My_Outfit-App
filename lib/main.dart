@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_outfit/homepage.dart';
+import 'onboarding-Page.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,7 +14,8 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: homepage(),
+      debugShowCheckedModeBanner: false,
+      home: onboarding_page(),
     );
   }
 }
