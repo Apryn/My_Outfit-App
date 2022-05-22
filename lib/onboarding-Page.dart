@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_outfit/Theme.dart';
-import 'package:my_outfit/main.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
-void main() => runApp(MyApp());
+import 'login_page.dart';
 
 class onboarding_page extends StatefulWidget {
   const onboarding_page({Key? key}) : super(key: key);
@@ -16,15 +14,18 @@ class _onboarding_pageState extends State<onboarding_page> {
   @override
   Widget build(BuildContext context) {
     var controller = PageController();
+    int islastpage = 0;
     return Scaffold(
         body: SafeArea(
       child: Container(
         child: Stack(children: [
           PageView(
             controller: controller,
+            onPageChanged: (index) {
+              setState(() => islastpage = index);
+            },
             children: [
               Stack(
-                
                 children: [
                   Container(
                     decoration: BoxDecoration(
@@ -93,12 +94,19 @@ class _onboarding_pageState extends State<onboarding_page> {
                     Container(
                       margin: EdgeInsets.only(bottom: 20),
                       child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            padding: EdgeInsets.only(left: 100, right: 100),
-                            primary: Red,
-                          ),
-                          onPressed: () {},
-                          child: Text("")),
+                        style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.only(left: 100, right: 100),
+                          primary: Red,
+                        ),
+                        child: Text(
+                            (islastpage == 2) ? "Get Started" : 'Continue'),
+                        onPressed: () async {
+                          // Navigator.of(context).pushReplacement(
+                          //   MaterialPageRoute(
+                          //       builder: (context) => login_page()),
+                          // );
+                        },
+                      ),
                     ),
                   ],
                 ),
