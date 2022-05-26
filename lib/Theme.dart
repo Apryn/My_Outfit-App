@@ -8,3 +8,6 @@ Color Yellow = Color(0xffFFB830);
 
 TextStyle Regular =
     TextStyle(fontFamily: "Poppins", fontWeight: FontWeight.w400);
+
+TextStyle Extralight =
+    TextStyle(fontFamily: "Poppins", fontWeight: FontWeight.w200);

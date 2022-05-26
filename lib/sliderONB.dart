@@ -13,7 +13,20 @@ class slideronb extends StatelessWidget {
     return Container(
       child: Stack(
         children: [
-          Image.asset(images!,fit: BoxFit.cover,)
+          Image.asset(
+            images!,
+            width: double.infinity,
+            fit: BoxFit.cover,
+          ),
+          Container(
+            color: Colors.black.withOpacity(0.3),
+          ),
+          Center(
+            child: Text(
+              tittle!,
+              style: Regular.copyWith(color: Colors.white),
+            ),
+          )
         ],
       ),
     );

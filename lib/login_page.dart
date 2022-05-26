@@ -9,7 +9,30 @@ class login_page extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          children: [Text("Login")],
+          children: [
+            Stack(
+              children: [
+                Container(
+                  width: double.infinity,
+                  height: 300,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage("Assets/images/BGlogin.png"),
+                          fit: BoxFit.cover)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Image.asset(
+                        "Assets/images/BGL.png",
+                        width: 200,
+                        height: 300,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            )
+          ],
         ),
       ),
     );
