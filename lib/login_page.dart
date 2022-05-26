@@ -14,7 +14,7 @@ class login_page extends StatelessWidget {
               children: [
                 Container(
                   width: double.infinity,
-                  height: 300,
+                  height: MediaQuery.of(context).size.height / 2,
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage("Assets/images/BGlogin.png"),
@@ -25,7 +25,7 @@ class login_page extends StatelessWidget {
                       Image.asset(
                         "Assets/images/BGL.png",
                         width: 200,
-                        height: 300,
+                        height: MediaQuery.of(context).size.height / 2,
                       ),
                     ],
                   ),
