@@ -6,8 +6,8 @@ Color Blue = Color(0xff78C9FF);
 Color Bg = Color(0xffFFEDDA);
 Color Yellow = Color(0xffFFB830);
 
-TextStyle Regular =
-    TextStyle(fontFamily: "Poppins", fontWeight: FontWeight.w400);
+TextStyle Regular = TextStyle(
+    fontFamily: "Poppins", fontWeight: FontWeight.w400, color: Colors.black);
 
 TextStyle Extralight =
     TextStyle(fontFamily: "Poppins", fontWeight: FontWeight.w200);
